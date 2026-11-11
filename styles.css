@@ -142,3 +142,96 @@ img { display: block; max-width: 100%; } a { color: inherit; text-decoration: no
   *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Website V2 additions. The original monochrome styling, logo and animation are preserved. */
+.plans-section, .pudc-section, .projects-section { padding-block: 96px 110px; }
+.plans-section { background: var(--black); }
+.plans-section .section-heading, .projects-section .section-heading { margin-top: 60px; margin-bottom: 42px; }
+.release-title { display:flex; align-items:flex-end; justify-content:space-between; gap:25px; padding:28px 0 20px; border-top:1px solid var(--line-strong); }
+.release-title.release-future { margin-top:74px; }
+.release-kicker { display:block; color:var(--gray-300); font-size:10px; font-weight:700; letter-spacing:.17em; }
+.release-title h4 { margin:7px 0 8px; font-size:clamp(25px,3.2vw,39px); font-weight:600; line-height:1.15; letter-spacing:-.055em; }
+.release-title h4 span { color:var(--gray-300); font-weight:400; }
+.release-title p { margin:0; color:var(--gray-200); font-size:13px; }
+.release-cert { flex-shrink:0; padding:9px 13px; border:1px solid var(--line-strong); color:var(--gray-100); font-size:10px; font-weight:700; letter-spacing:.08em; }
+.plan-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.plan-grid.standard-plans { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.plan-card { min-height:310px; display:flex; flex-direction:column; padding:25px; border:1px solid var(--line); background:linear-gradient(140deg,rgba(255,255,255,.033),rgba(255,255,255,.008)); transition:transform .2s ease,border-color .2s ease; }
+.plan-card:hover { transform:translateY(-3px); border-color:var(--line-strong); }
+.plan-top { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; color:var(--gray-400); font-size:9px; letter-spacing:.11em; font-weight:700; }
+.plan-label { color:var(--gray-200); border:1px solid var(--line-strong); padding:4px 6px; white-space:nowrap; }
+.plan-card h5 { margin:32px 0 4px; color:var(--gray-200); font-size:14px; font-weight:500; }
+.plan-price { color:var(--white); font-size:clamp(32px,3vw,43px); font-weight:600; letter-spacing:-.065em; line-height:1.2; }
+.plan-price small { color:var(--gray-300); font-size:11px; letter-spacing:.11em; font-weight:700; }
+.plan-allowance { margin:9px 0 0; color:var(--gray-100); font-size:14px; font-weight:600; }
+.plan-allowance span { color:var(--gray-300); font-size:12px; font-weight:400; }
+.plan-rule { width:38px; height:1px; margin:20px 0 15px; background:var(--gray-400); }
+.plan-details { margin:0; color:var(--gray-200); font-size:12px; line-height:1.7; }
+.plan-foot { margin-top:auto; padding-top:24px; color:var(--gray-400); font-size:10px; letter-spacing:.04em; }
+.pricing-disclaimer, .projects-foot { max-width:920px; margin:25px 0 0; color:var(--gray-300); font-size:11px; line-height:1.75; }
+.pudc-section { background:radial-gradient(ellipse at 100% 40%,rgba(255,255,255,.045),transparent 52%),var(--charcoal); }
+.pudc-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:clamp(36px,7vw,110px); padding-top:65px; }
+.pudc-copy h3 { margin:0 0 26px; font-size:clamp(52px,7vw,82px); letter-spacing:-.08em; line-height:.95; font-weight:550; }
+.pudc-copy h3 span { color:var(--gray-300); }
+.pudc-copy .pudc-lead { margin:0 0 24px; color:var(--gray-100); font-size:clamp(18px,2vw,23px); line-height:1.5; }
+.pudc-copy p:not(.eyebrow):not(.pudc-lead) { color:var(--gray-200); font-size:13px; }
+.pudc-copy .pudc-small { margin-top:21px; color:var(--gray-300) !important; font-size:11px !important; }
+.pudc-certificate { padding:30px; border:1px solid var(--line-strong); background:linear-gradient(135deg,#202020,#0a0a0a 65%); box-shadow:0 22px 65px rgba(0,0,0,.24); }
+.certificate-head { display:flex; justify-content:space-between; gap:14px; color:var(--gray-200); font-size:9px; font-weight:700; letter-spacing:.13em; }
+.certificate-title { margin:51px 0 8px; font-size:clamp(72px,9vw,110px); font-weight:650; line-height:1; letter-spacing:-.075em; }
+.pudc-certificate > p { margin:0 0 42px; color:var(--gray-300); font-size:9px; letter-spacing:.11em; }
+.certificate-rows { border-top:1px solid var(--line-strong); }
+.certificate-rows > div { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:15px 0; border-bottom:1px solid var(--line); }
+.certificate-rows span { color:var(--gray-200); font-size:19px; font-weight:600; }
+.certificate-rows b { color:var(--gray-200); font-size:12px; font-weight:500; }
+.certificate-foot { margin-top:30px; color:var(--gray-400); font-size:9px; letter-spacing:.12em; }
+.projects-section { background:var(--black); }
+.projects-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.future-card { min-height:275px; padding:25px; border:1px solid var(--line); background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.006)); transition:border-color .2s ease,transform .2s ease; }
+.future-card:hover { border-color:var(--line-strong); transform:translateY(-3px); }
+.future-top { display:flex; justify-content:space-between; gap:10px; color:var(--gray-400); font-size:9px; font-weight:700; letter-spacing:.09em; }
+.future-card h4 { margin:42px 0 4px; font-size:25px; line-height:1.2; font-weight:600; letter-spacing:-.04em; }
+.future-sub { margin:0 0 17px !important; color:var(--gray-300) !important; font-size:9px !important; font-weight:700; letter-spacing:.13em; }
+.future-card p { margin:0; color:var(--gray-200); font-size:12px; line-height:1.7; }
+@media(max-width:1050px) {
+  .primary-navigation { gap:clamp(10px,2vw,23px); }
+  .primary-navigation a { font-size:11px; }
+  .projects-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:900px) {
+  .plan-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pudc-grid { gap:35px; }
+  .pudc-certificate { padding:24px; }
+}
+@media(max-width:760px) {
+  .primary-navigation { gap:10px; }
+  .primary-navigation a { font-size:10px; }
+  .brand { gap:8px; }
+}
+@media(max-width:680px) {
+  .plans-section, .pudc-section, .projects-section { padding-block:70px 78px; }
+  .plans-section .section-heading, .projects-section .section-heading { margin-top:48px; }
+  .release-title { align-items:flex-start; gap:12px; }
+  .release-cert { padding:7px; font-size:9px; }
+  .release-title.release-future { margin-top:52px; }
+  .plan-grid, .plan-grid.standard-plans, .projects-grid, .pudc-grid { grid-template-columns:1fr; }
+  .plan-card { min-height:280px; padding:22px; }
+  .pudc-grid { padding-top:50px; }
+  .certificate-title { margin-top:42px; }
+  .future-card { min-height:0; padding:23px; }
+  .future-card h4 { margin-top:34px; }
+  .primary-navigation { gap:0; }
+  .primary-navigation a { font-size:12px; }
+}
+
+/* Keep the navigation usable on mid-sized screens without changing the original mobile styling. */
+@media (min-width:681px) and (max-width:1000px) {
+  .menu-toggle { display:flex; width:42px; height:42px; flex-direction:column; align-items:center; justify-content:center; gap:6px; border:1px solid var(--line-strong); background:transparent; color:var(--white); cursor:pointer; }
+  .menu-toggle span { width:16px; height:1px; background:currentColor; transition:transform 180ms ease; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform:translateY(3.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform:translateY(-3.5px) rotate(-45deg); }
+  .primary-navigation { position:absolute; top:calc(100% + 1px); right:0; left:0; display:none; flex-direction:column; align-items:stretch; gap:0; padding:8px 28px 16px; border-bottom:1px solid var(--line-strong); background:rgba(8,8,8,.98); }
+  .primary-navigation.is-open { display:flex; }
+  .primary-navigation a { padding:13px 0; border-bottom:1px solid var(--line); font-size:12px; }
+  .primary-navigation a:last-child { border-bottom:0; }
+}
